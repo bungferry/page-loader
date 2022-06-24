@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number preloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+    <section>
+        <h2>Welcome back to All <span> Stay tuned for more video...</span>
+        </h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis maiores inventore ducimus repellendus voluptatibus delectus nesciunt dolores deleniti laudantium numquam voluptatum corrupti, atque facere, sed earum consequuntur molestiae reprehenderit, quas dignissimos vero ipsa. Vel, a! Beatae neque dolores magnam repellat quia debitis eveniet cum commodi quidem sint? Commodi ex rerum quia cum fugiat ipsum, quibusdam ratione vero consequatur, obcaecati deserunt inventore eum officia dolores magni suscipit ea assumenda? Itaque est ullam in sunt cum laborum veritatis, saepe soluta natus quasi architecto molestias? Hic fugit ducimus dignissimos earum, blanditiis corrupti adipisci, modi eum, repellat nulla eaque? Nobis eligendi magni non quos?<br><br>
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum aliquam soluta ab similique eligendi a temporibus voluptas ipsa molestias! Nisi libero aspernatur ipsa dolores qui ut sapiente necessitatibus ea!
+
+            </p>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function counter() {
+            var count = setInterval(function(){
+                var c = parseInt($('.counter').text());
+                $('.counter').text((++c).toString());
+                if (c == 100){
+                    clearInterval(count);
+                    $('.counter').addClass('hide')
+                    $('.preloader').addClass('active')
+
+                }
+            },60)
+        }
+        counter()
+    </script>
+</body>
+</html>
